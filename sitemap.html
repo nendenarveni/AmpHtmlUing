@@ -249,7 +249,7 @@ return(false);
 </script>
 <script type='text/javaScript'>
 document.write;var loadToc,loadCategories,_toc= {
-init: function(){var cfg={homePage:getQueryVariable("url"),maxResults:10,numChars:270,thumbWidth:140,thumbHeight:95,navText:"Mostrar artículo siguiente &#9660;",resetToc:"Regresar al inicio",noImage:"https://1.bp.blogspot.com/-BSklhpKEQeI/XBvUXqevatI/AAAAAAAACXY/Xyeh9lc_X-kH_CMuhL24p6tc-stkrtPXgCLcBGAs/s1600/tanpa-gmbr.png",loading:"<span>Cargando...</span>",counting:"<div>Memuat item...</div>",searching:"<span>Buscar...</span>"
+init: function(){var cfg={homePage:getQueryVariable("url"),maxResults:10,numChars:270,thumbWidth:140,thumbHeight:95,navText:"Tampilkan artikel berikutnya &#9660;",resetToc:"Kembali ke awal",noImage:"https://1.bp.blogspot.com/-BSklhpKEQeI/XBvUXqevatI/AAAAAAAACXY/Xyeh9lc_X-kH_CMuhL24p6tc-stkrtPXgCLcBGAs/s1600/tanpa-gmbr.png",loading:"<span>Cargando...</span>",counting:"<div>Memuat item...</div>",searching:"<span>Buscar...</span>"
 },w=window,d=document,el=function(id) {
 return d.getElementById(id);
 },o= {
@@ -270,7 +270,7 @@ fn.b(cfg.homePage+'/feeds/posts/summary?alt=json-in-script&start-index='+((o.i*c
 
 o.j=(tag!==null)?tag:null;o.l=mode;o.a.disabled=true;o.b.children[0].disabled=true;
 },d:function(json) {
-var _h;o.g.innerHTML="";o.e.innerHTML=o.l==1?'<span>Hasil penelusuran untuk kata kunci <b>&#8220;'+ o.m+'&#8221;</b> ('+ json.feed.openSearch$totalResults.$t+' Hasil)</span>': '<div>Total: '+ json.feed.openSearch$totalResults.$t+' Artículos</div>';
+var _h;o.g.innerHTML="";o.e.innerHTML=o.l==1?'<span>Hasil penelusuran untuk kata kunci <b>&#8220;'+ o.m+'&#8221;</b> ('+ json.feed.openSearch$totalResults.$t+' Hasil)</span>': '<div>Total: '+ json.feed.openSearch$totalResults.$t+' Artikel</div>';
 if("entry"in json.feed){var a=json.feed.entry,b,c,_d,e="0 Komentar",f="",g;for(var i=0;i<cfg.maxResults;i++){if(i==a.length)break;b=a[i].title.$t;_d=("summary"in a[i])?a[i].summary.$t.replace(/<br ?\/?>/ig," ").replace(/<(.*?)>/g,"").replace(/<iframe/ig,"").substring(0,cfg.numChars): "";
 g=("media$thumbnail"in a[i])?a[i].media$thumbnail.url.replace(/.*?: \/\//g , "//").replace(/\/s[0-9]+\-c/,"\/s"+ cfg.thumbWidth+""):cfg.noImage.replace(/\/s[0-9]+\-c/,"\/s"+ cfg.thumbWidth+"");
 for(var j=0,jen=a[i].link.length;j<jen;j++){c=(a[i].link[j].rel=="alternate")?a[i].link[j].href: "#";
